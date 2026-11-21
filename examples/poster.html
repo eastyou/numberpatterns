@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>数列规律速查表</title>
+<style>
+* { box-sizing: border-box; }
+body {
+    margin: 0;
+    padding: 24px;
+    background: #eef2f7;
+    color: #1f2937;
+    font-family: "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei",
+        "Noto Sans CJK SC", sans-serif;
+    line-height: 1.6;
+}
+.sheet {
+    max-width: 820px;
+    margin: 0 auto;
+    background: #ffffff;
+    border-radius: 14px;
+    padding: 32px 36px 40px;
+    box-shadow: 0 10px 30px rgba(15, 23, 42, 0.08);
+}
+h1 { margin: 0 0 6px; font-size: 26px; letter-spacing: 1px; }
+.meta { margin: 0 0 24px; color: #64748b; font-size: 14px; }
+.mono { font-family: "SFMono-Regular", Consolas, "Liberation Mono", monospace; }
+@page { size: A4; margin: 14mm; }
+@media print {
+    body { background: #ffffff; padding: 0; }
+    .sheet { box-shadow: none; border-radius: 0; max-width: none; padding: 0; }
+    .answers { break-before: page; page-break-before: always; }
+    .question, .rule-card { break-inside: avoid; page-break-inside: avoid; }
+}
+
+table { width: 100%; border-collapse: collapse; margin-top: 18px; }
+th, td { border: 1px solid #cbd5e1; padding: 10px 12px; text-align: left; }
+thead th { background: #eff6ff; color: #1d4ed8; }
+tbody th { background: #f8fafc; white-space: nowrap; }
+.rule-card { margin-top: 22px; padding: 14px 18px; background: #f8fafc;
+    border-left: 4px solid #2563eb; border-radius: 8px; }
+.rule-card h2 { margin: 0 0 6px; font-size: 17px; }
+.rule-card p { margin: 4px 0; font-size: 14px; color: #475569; }
+@media (max-width: 640px) {
+    table, thead, tbody, th, td, tr { display: block; }
+    thead { display: none; }
+    tr { margin-bottom: 12px; border: 1px solid #cbd5e1; border-radius: 8px; }
+    th, td { border: none; border-bottom: 1px dashed #e2e8f0; }
+}
+</style>
+</head>
+<body>
+<main class="sheet">
+<h1>数列规律速查表</h1>
+<p class="meta">7 类常见规律 &middot; 按优先级从简到繁排列</p>
+<table>
+<thead><tr><th>规律</th><th>识别特征</th><th>示例</th><th>下一项</th></tr></thead>
+<tbody>
+<tr><th>常数数列</th><td>每一项都相同</td><td class="mono">5, 5, 5, 5</td><td class="mono">5</td></tr>
+<tr><th>等差数列</th><td>相邻两项之差相同</td><td class="mono">2, 4, 6, 8</td><td class="mono">10</td></tr>
+<tr><th>等比数列</th><td>相邻两项之比为整数（≠ 0、1）</td><td class="mono">1, 3, 9, 27</td><td class="mono">81</td></tr>
+<tr><th>平方数列</th><td>连续整数的平方，可偏移起点</td><td class="mono">1, 4, 9, 16</td><td class="mono">25</td></tr>
+<tr><th>斐波那契型数列</th><td>从第 3 项起，每项等于前两项之和</td><td class="mono">1, 1, 2, 3, 5</td><td class="mono">8</td></tr>
+<tr><th>交替数列</th><td>奇数位与偶数位各自等差且公差相同</td><td class="mono">1, 4, 2, 5, 3, 6</td><td class="mono">4</td></tr>
+<tr><th>二阶差分数列</th><td>二阶差分恒定（不为 0）</td><td class="mono">2, 5, 10, 17</td><td class="mono">26</td></tr>
+</tbody>
+</table>
+<section class="rule-card"><h2>常数数列</h2><p>识别：每一项都相同</p><p class="mono">示例：5, 5, 5, 5 → 5</p></section>
+<section class="rule-card"><h2>等差数列</h2><p>识别：相邻两项之差相同</p><p class="mono">示例：2, 4, 6, 8 → 10</p></section>
+<section class="rule-card"><h2>等比数列</h2><p>识别：相邻两项之比为整数（≠ 0、1）</p><p class="mono">示例：1, 3, 9, 27 → 81</p></section>
+<section class="rule-card"><h2>平方数列</h2><p>识别：连续整数的平方，可偏移起点</p><p class="mono">示例：1, 4, 9, 16 → 25</p></section>
+<section class="rule-card"><h2>斐波那契型数列</h2><p>识别：从第 3 项起，每项等于前两项之和</p><p class="mono">示例：1, 1, 2, 3, 5 → 8</p></section>
+<section class="rule-card"><h2>交替数列</h2><p>识别：奇数位与偶数位各自等差且公差相同</p><p class="mono">示例：1, 4, 2, 5, 3, 6 → 4</p></section>
+<section class="rule-card"><h2>二阶差分数列</h2><p>识别：二阶差分恒定（不为 0）</p><p class="mono">示例：2, 5, 10, 17 → 26</p></section>
+</main>
+</body>
+</html>
